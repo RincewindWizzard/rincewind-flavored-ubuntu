@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     jq \
     vim \
     git \
@@ -8,5 +8,6 @@ RUN apt-get update && apt-get install -y \
     python3-poetry \
     && rm -rf /var/lib/apt/lists/*
 
+ADD .bashrc /root/.bashrc
 
 CMD ["bash"]
