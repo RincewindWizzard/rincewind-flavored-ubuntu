@@ -3,6 +3,7 @@ FROM ubuntu:latest
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     jq \
     xq \
+    yq \
     vim \
     git \
     python3 \
